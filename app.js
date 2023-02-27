@@ -16,13 +16,29 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
+// Render home page
 
+app.get("/", (req, res) => {
+  res.render("home", {content: homeStartingContent})
+})
 
+app.get("/about", (req, res) => {
+  res.render("about", {content: aboutContent})
+} )
 
+app.get("/contact", (req, res) => {
+  res.render("contact", {content: contactContent})
+})
 
+app.get("/compose", (req, res) => {
+  res.render("compose")
+})
 
-
-
+app.post("/compose", (req, res) => {
+  console.log(req.body.title)
+  console.log(req.body.newPost)
+  res.redirect("/compose")
+})
 
 
 

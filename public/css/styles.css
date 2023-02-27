@@ -33,3 +33,25 @@
 	font-size: 12px;
   color: #fff;
 }
+
+.text-box {
+    width: 100%;
+    max-width: 100%;
+}
+
+.new-lines {
+    display: block;
+}
+
+.content {
+    width: 100;
+}
+
+.content > textarea {
+    width: inherit;
+    max-width: 100%;
+}
+
+button {
+    background-color: blue;
+}
