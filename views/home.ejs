@@ -2,9 +2,12 @@
 
 <h1>Mind of a Mountain Man</h1>
 
+<% for (let i = 0; i < content.length; i++) { %>
+<h2><%= content[i].title %></h2>
 <p>
-    <%= content %>
+    <%= content[i].post.slice(0, 100) %> ...
+    <a href="/post/id/<%= i %>">Read more here...</a>
 </p>
-
+<% } %>
 
 <%- include("partials/footer") %>
